@@ -2,7 +2,7 @@
 
 ## Problem introduction (See [pictures/f2.jpg](https://github.com/BennettBin/MAKEE/blob/main/pictures/f2.jpg))
 The implementation process of real-time PBPM usually involves three stages:  
-(1) The process-aware information systems (PAIS) records business activities and their related attributes during business operations in real-time, such as operators, time, equipment, and resources, and then stores the recorded information in a structured manner in event logs.  
+(1) The process-aware information system (PAIS) records business activities and their related attributes during business operations in real-time, such as operators, time, equipment, and resources, and then stores the recorded information in a structured manner in event logs.  
 (2) The recorded event logs and other business process information become training inputs for the PBPM algorithm after preprocessing. The predictive algorithm can acquire predictive ability by learning the implicit business rules or structures involved.  
 (3) Depending on the characteristics of the PAIS, business process managers deploy the learned predictive model obtained in the information system. The PAIS captures new events in real time and feeds the current prefix sequence into the predictive model, thereby achieving real-time PBPM for process managers. 
 
@@ -39,7 +39,7 @@ To verify the effectiveness and progressiveness of MAKEE, we have selected sever
 |               | MAKEE | 0.7630 | **0.7298** | 0.5628 | 0.4694 | **0.4234** | **0.5136** | **0.5582** | 0.3445 | **0.4969** | **0.5088** | **0.4091** | **0.8249** |
 
 
-## Contributing
+## Contribution
 (1) We propose an approach to simultaneously learn explicit sequential information from attribute sequences and deep structural information from event attribute networks, providing a novel perspective for PBPM research.  
 (2) We adopt the idea of multi-view learning, treating each event attribute as a separate view. Our carefully designed neural network model effectively integrates multiple structural features from attribute networks and multiple sequence features from prefix sequences, enabling the model to recognize differentiated states of events from various perspectives.  
 (3) The node feature enhancement method has been proposed to integrate the global structural information of attribute networks into their feature encoding, helping the neural network to have a more comprehensive understanding of a complete business scenario.  
