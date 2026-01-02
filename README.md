@@ -19,7 +19,7 @@ To verify the effectiveness and progressiveness of MAKEE, we have selected sever
 \item predictive approach combining RGB encoding and CNN to predict activities \cite{pasquadibisceglie2020predictive}. 
 \end{enumerate}
 
-|Metrics | Approaches | BPIC 2012W | BPIC 2012 WC | BPIC 2020 D | BPIC 2020 I | BPIC 2020 Pe | BPIC2020 Pr | BPIC 2020 R | BPIC 2013 P | BPIC 2019 W | BPIC 2019 C | Env permit | Nasa |
+|Approaches | BPIC 2012W | BPIC 2012 WC | BPIC 2020 D | BPIC 2020 I | BPIC 2020 Pe | BPIC2020 Pr | BPIC 2020 R | BPIC 2013 P | BPIC 2019 W | BPIC 2019 C | Env permit | Nasa |
 |------|------|------|------|------|------|------|------|------|------|------|------|------|------|
 |Accuracy|
 |(1) | 0.8997 | 0.7982 | 0.8838 | 0.8733 | 0.8056 | 0.8485 | 0.8910 | 0.6027 | 0.7964 | 0.7512 | 0.8249 | 0.8811 |
