@@ -11,11 +11,11 @@ Current deep learning-based studies have found that embedding structural informa
 
 ## Evaluation
 To verify the effectiveness and progressiveness of MAKEE, we have selected several advanced methods as benchmarks. The methods under consideration provide source code for reproduction, which enables us to conduct credible comparisons under the same experimental settings in the source papers. Specifically, the following methods were selected for comparison:  
-(1) Predictive approach combining one-hot encoding and LSTM to predict timestamps and activities;  
-(2) Predictive approach based on an inception CNN model;  
-(3) Multi-view predictive approach based on LSTM;  
-(4) Predictive approach based on GCN model with four variants;  
-(5) Predictive approach combining RGB encoding and CNN to predict activities.  
+(1) Predictive approach combining one-hot encoding and LSTM to predict timestamps and activities ([1]);  
+(2) Predictive approach based on an inception CNN model([2]);  
+(3) Multi-view predictive approach based on LSTM([3]);  
+(4) Predictive approach based on GCN model with four variants([4]);  
+(5) Predictive approach combining RGB encoding and CNN to predict activities([5]).  
 
 | Metrics | Approaches | BPIC 2012W | BPIC 2012 WC | BPIC 2020 D | BPIC 2020 I | BPIC 2020 Pe | BPIC2020 Pr | BPIC 2020 R | BPIC 2013 P | BPIC 2019 W | BPIC 2019 C | Env permit | Nasa |  
 |---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|---------------|
@@ -46,5 +46,12 @@ To verify the effectiveness and progressiveness of MAKEE, we have selected sever
 (4) We compare our method with benchmark methods based on twelve real-life event logs and conduct multiple evaluations from different perspectives to explore its effectiveness and robustness for the next-activity prediction task.  
 
 ## Reference
-If you use this method, please cite the original paper:  
+[1] N. Tax, I. Verenich, M. La Rosa, M. Dumas, Predictive business process monitoring with LSTM neural networks, in: Advanced Information Systems Engineering: 29th International Conference, CAiSE 2017, Essen, Germany, June 12–16, 2017, Proceedings 29, Springer, 2017, pp. 477–492.  
+[2] N. Di Mauro, A. Appice, T.M.A. Basile, Activity prediction of business process instances with inception CNN models, in: AI* IA 2019–Advances in Artificial Intelligence: XVIIIth International Conference of the Italian Association for Artificial Intelligence, Rende, Italy, November 19–22, 2019, Proceedings 18, Springer, 2019, pp. 348–361.  
+[3] V. Pasquadibisceglie, A. Appice, G. Castellano, D. Malerba, A multi-view deep learning approach for predictive business process monitoring, IEEE Trans. Serv. Comput. 15(4) (2021) 2382–2395.  
+[4] I. Venugopal, J. Töllich, M. Fairbank, A. Scherp, A comparison of deep-learning methods for analysing and predicting business processes, in: 2021 International Joint Conference on Neural Networks (IJCNN), IEEE, 2021, pp. 1–8.  
+[5] V. Pasquadibisceglie, A. Appice, G. Castellano, D. Malerba, Predictive process mining meets computer vision, in: Business Process Management Forum: BPM Forum 2020, Seville, Spain, September 13–18, 2020, Proceedings 18, Springer, 2020, pp. 176–192.  
+
+## Copyright
+If you use this method, please cite the original paper (https://www.sciencedirect.com/science/article/abs/pii/S0950705125013401):  
 Chen, B., Zhao, S., Lin, L., & Zhang, Q. (2025). MAKEE: Multi-view Attribute Network and Sequence Embedding Approach for Predictive Process Monitoring. Knowledge-Based Systems, 114299.
