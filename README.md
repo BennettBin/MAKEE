@@ -10,14 +10,14 @@ The implementation process of real-time PBPM usually involves three stages:<br>
 Current deep learning-based studies have found that embedding structural information of process models helps neural networks learn the deep logic behind business processes. However, they mainly focus on the control-flow perspective, while other perspectives behind the business process, such as organizational structure, social network, and resource behavior, have been largely overlooked. To address this issue, this study proposes a multi-view learning prediction approach that integrates complementary information from both multiple attribute networks and sequences. We carefully design a deep learning model framework to integrate multi-view structural and sequential information for the next-activity prediction of the running trace. On the one hand, a simple and efficient process mining algorithm is designed to model multiple attribute network graphs, and a graph convolutional network is integrated to learn their multi-view structural information, helping understand the deep features of business scenarios. For this, a node feature enhancement method is proposed to integrate global information from historical business executions to help the proposed neural network understand the structure of a complete business scenario. On the other hand, we construct the feature representation of attribute sequences and integrate the Transformer to capture the dependency relations and sequential features within attribute sequences. 
 
 ## Evaluation
-To verify the effectiveness and progressiveness of MAKEE, we have selected several advanced methods as benchmarks. The methods under consideration provide source code for reproduction, which enables us to conduct credible comparisons under the same experimental settings in the source papers. Specifically, the following methods were selected for comparison: 
-\begin{enumerate}[(1)]
-\item predictive approach combining one-hot encoding and LSTM to predict timestamps and activities \cite{tax2017predictive}; 
-\item predictive approach based on inception CNN model \cite{di2019activity};
-\item multi-view predictive approach based on LSTM \cite{pasquadibisceglie2021multi}; 
-\item predictive approach based on GCN model with four variants, i.e., ${GCN}_B$, ${GCN}_{LB}$, ${GCN}_W$, and ${GCN}_{LW}$ \cite{venugopal2021comparison}; 
-\item predictive approach combining RGB encoding and CNN to predict activities \cite{pasquadibisceglie2020predictive}. 
-\end{enumerate}
+To verify the effectiveness and progressiveness of MAKEE, we have selected several advanced methods as benchmarks. The methods under consideration provide source code for reproduction, which enables us to conduct credible comparisons under the same experimental settings in the source papers. Specifically, the following methods were selected for comparison: <br>
+
+(1) Predictive approach combining one-hot encoding and LSTM to predict timestamps and activities \cite{tax2017predictive};  <br>
+(2) Predictive approach based on inception CNN model \cite{di2019activity}; <br>
+(3) Multi-view predictive approach based on LSTM \cite{pasquadibisceglie2021multi};  <br>
+(4) Predictive approach based on GCN model with four variants, i.e., ${GCN}_B$, ${GCN}_{LB}$, ${GCN}_W$, and ${GCN}_{LW}$ \cite{venugopal2021comparison};  <br>
+(5) Predictive approach combining RGB encoding and CNN to predict activities \cite{pasquadibisceglie2020predictive}.  <br>
+
 
 |Approaches | BPIC 2012W | BPIC 2012 WC | BPIC 2020 D | BPIC 2020 I | BPIC 2020 Pe | BPIC2020 Pr | BPIC 2020 R | BPIC 2013 P | BPIC 2019 W | BPIC 2019 C | Env permit | Nasa |
 |------|------|------|------|------|------|------|------|------|------|------|------|------|------|
@@ -43,11 +43,11 @@ To verify the effectiveness and progressiveness of MAKEE, we have selected sever
 |MAKEE | 0.7630 | **0.7298** | 0.5628 | 0.4694 | **0.4234** | **0.5136** | **0.5582** | 0.3445 | **0.4969** | **0.5088** | **0.4091** | **0.8249** |
 
 ## Contributing
-(1) We propose an approach to simultaneously learn explicit sequential information from attribute sequences and deep structural information from event attribute networks, providing a novel perspective for PBPM research.
-(2) We adopt the idea of multi-view learning, treating each event attribute as a separate view. Our carefully designed neural network model effectively integrates multiple structural features from attribute networks and multiple sequence features from prefix sequences, enabling the model to recognize differentiated states of events from various perspectives.
-(3) The node feature enhancement method has been proposed to integrate the global structural information of attribute networks into their feature encoding, helping the neural network to have a more comprehensive understanding of a complete business scenario.
-(4) We compare our method with benchmark methods based on twelve real-life event logs and conduct multiple evaluations from different perspectives to explore its effectiveness and robustness for the next-activity prediction task. 
+(1) We propose an approach to simultaneously learn explicit sequential information from attribute sequences and deep structural information from event attribute networks, providing a novel perspective for PBPM research. <br>
+(2) We adopt the idea of multi-view learning, treating each event attribute as a separate view. Our carefully designed neural network model effectively integrates multiple structural features from attribute networks and multiple sequence features from prefix sequences, enabling the model to recognize differentiated states of events from various perspectives. <br>
+(3) The node feature enhancement method has been proposed to integrate the global structural information of attribute networks into their feature encoding, helping the neural network to have a more comprehensive understanding of a complete business scenario. <br>
+(4) We compare our method with benchmark methods based on twelve real-life event logs and conduct multiple evaluations from different perspectives to explore its effectiveness and robustness for the next-activity prediction task.  <br>
 
 ## Reference
-If you use this method, please cite the original paper:
+If you use this method, please cite the original paper: <br>
 Chen, B., Zhao, S., Lin, L., & Zhang, Q. (2025). MAKEE: Multi-view Attribute Network and Sequence Embedding Approach for Predictive Process Monitoring. Knowledge-Based Systems, 114299.
