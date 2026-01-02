@@ -1,17 +1,24 @@
 # MAKEE: Multi-view Attribute Network and Sequence Embedding Approach for Predictive Process Monitoring
 
-## Abstract
+## Problem introduction
+The implementation process of real-time PBPM usually involves three stages:
+(1) The PAIS records business activities and their related attributes during business operations in real-time, such as operators, time, equipment, and resources, and then stores the recorded information in a structured manner in event logs. 
+(2) The recorded event logs and other business process information become training inputs for the PBPM algorithm after preprocessing. The predictive algorithm can acquire predictive ability by learning the implicit business rules or structures involved. 
+(3) Depending on the characteristics of the PAIS, business process managers deploy the learned predictive model obtained in the information system. The PAIS captures new events in real time and feeds the current prefix sequence into the predictive model, thereby achieving real-time PBPM for process managers. 
 
-Predictive business process monitoring can help detect and solve problems on time by monitoring the execution of business processes in real time, thereby improving overall business efficiency and performance. Current deep learning-based studies have found that embedding structural information of process models helps neural networks learn the deep logic behind business processes. However, they mainly focus on the control-flow perspective, while other perspectives behind the business process, such as organizational structure, social network, and resource behavior, have been largely overlooked. To address this issue, this study proposes a multi-view learning prediction approach that integrates complementary information from both multiple attribute networks and sequences. We carefully design a deep learning model framework to integrate multi-view structural and sequential information for the next-activity prediction of the running trace. On the one hand, a simple and efficient process mining algorithm is designed to model multiple attribute network graphs, and a graph convolutional network is integrated to learn their multi-view structural information, helping understand the deep features of business scenarios. For this, a node feature enhancement method is proposed to integrate global information from historical business executions to help the proposed neural network understand the structure of a complete business scenario. On the other hand, we construct the feature representation of attribute sequences and integrate the Transformer to capture the dependency relations and sequential features within attribute sequences. Experimental evaluation of twelve real-life event logs shows that the proposed approach performs well in prediction accuracy and robustness.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough documentation and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help.  
-Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript.
+## About MAKEE
+Current deep learning-based studies have found that embedding structural information of process models helps neural networks learn the deep logic behind business processes. However, they mainly focus on the control-flow perspective, while other perspectives behind the business process, such as organizational structure, social network, and resource behavior, have been largely overlooked. To address this issue, this study proposes a multi-view learning prediction approach that integrates complementary information from both multiple attribute networks and sequences. We carefully design a deep learning model framework to integrate multi-view structural and sequential information for the next-activity prediction of the running trace. On the one hand, a simple and efficient process mining algorithm is designed to model multiple attribute network graphs, and a graph convolutional network is integrated to learn their multi-view structural information, helping understand the deep features of business scenarios. For this, a node feature enhancement method is proposed to integrate global information from historical business executions to help the proposed neural network understand the structure of a complete business scenario. On the other hand, we construct the feature representation of attribute sequences and integrate the Transformer to capture the dependency relations and sequential features within attribute sequences. 
 
 ## Evaluation
+To verify the effectiveness and progressiveness of MAKEE, we have selected several advanced methods as benchmarks. The methods under consideration provide source code for reproduction, which enables us to conduct credible comparisons under the same experimental settings in the source papers. Specifically, the following methods were selected for comparison: 
+\begin{enumerate}[(1)]
+\item predictive approach combining one-hot encoding and LSTM to predict timestamps and activities \cite{tax2017predictive}; 
+\item predictive approach based on inception CNN model \cite{di2019activity};
+\item multi-view predictive approach based on LSTM \cite{pasquadibisceglie2021multi}; 
+\item predictive approach based on GCN model with four variants, i.e., ${GCN}_B$, ${GCN}_{LB}$, ${GCN}_W$, and ${GCN}_{LW}$ \cite{venugopal2021comparison}; 
+\item predictive approach combining RGB encoding and CNN to predict activities \cite{pasquadibisceglie2020predictive}. 
+\end{enumerate}
+
 |Metrics | Approaches | BPIC 2012W | BPIC 2012 WC | BPIC 2020 D | BPIC 2020 I | BPIC 2020 Pe | BPIC2020 Pr | BPIC 2020 R | BPIC 2013 P | BPIC 2019 W | BPIC 2019 C | Env permit | Nasa |
 |------|------|------|------|------|------|------|------|------|------|------|------|------|------|
 |Accuracy|
@@ -35,45 +42,12 @@ Laracasts contains over 1500 video tutorials on a range of topics including Lara
 |(5)-RGB | 0.7594 | 0.6090 | **0.5738** | **0.5091** | 0.4144 | 0.5111 | 0.4485 | 0.2442 | 0.4743 | 0.2141 | 0.4014 | 0.8216 |
 |MAKEE | 0.7630 | **0.7298** | 0.5628 | 0.4694 | **0.4234** | **0.5136** | **0.5582** | 0.3445 | **0.4969** | **0.5088** | **0.4091** | **0.8249** |
 
-
-
-We would like to extend our thanks to the following sponsors for funding Laravel development.  
-If you are interested in becoming a sponsor, please visit the Laravel sponsorship page.
-
-### Premium Partners
-
-- **Vehikl**
-- **Tighten Co.**
-- **WebReinvent**
-- **Kirschbaum Development Group**
-- **64 Robots**
-- **Cubet Techno Labs**
-- **Cyber-Duck**
-- **Many**
-- **Webdock**
-- **DevSquad**
-- **Jump24**
-- **Redberry**
-- **Active Logic**
-- **byte5**
-- **OP.GG**
-
 ## Contributing
+(1) We propose an approach to simultaneously learn explicit sequential information from attribute sequences and deep structural information from event attribute networks, providing a novel perspective for PBPM research.
+(2) We adopt the idea of multi-view learning, treating each event attribute as a separate view. Our carefully designed neural network model effectively integrates multiple structural features from attribute networks and multiple sequence features from prefix sequences, enabling the model to recognize differentiated states of events from various perspectives.
+(3) The node feature enhancement method has been proposed to integrate the global structural information of attribute networks into their feature encoding, helping the neural network to have a more comprehensive understanding of a complete business scenario.
+(4) We compare our method with benchmark methods based on twelve real-life event logs and conduct multiple evaluations from different perspectives to explore its effectiveness and robustness for the next-activity prediction task. 
 
-Thank you for considering contributing to the Laravel framework!  
-The contribution guide can be found in the Laravel documentation.
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all,  
-please review and abide by the Code of Conduct.
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel,  
-please send an e-mail to Taylor Otwell via taylor@laravel.com.  
-All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Reference
+If you use this method, please cite the original paper:
+Chen, B., Zhao, S., Lin, L., & Zhang, Q. (2025). MAKEE: Multi-view Attribute Network and Sequence Embedding Approach for Predictive Process Monitoring. Knowledge-Based Systems, 114299.
