@@ -17,7 +17,7 @@ To verify the effectiveness and progressiveness of MAKEE, we have selected sever
 (4) Predictive approach based on GCN model with four variants, i.e., ${GCN}_B$, ${GCN}_{LB}$, ${GCN}_W$, and ${GCN}_{LW}$ \cite{venugopal2021comparison};  
 (5) Predictive approach combining RGB encoding and CNN to predict activities \cite{pasquadibisceglie2020predictive}.  
 
-| Metrics | Approaches | BPIC 2012W | BPIC 2012 WC | BPIC 2020 D | BPIC 2020 I | BPIC 2020 Pe | BPIC2020 Pr | BPIC 2020 R | BPIC 2013 P | BPIC 2019 W | BPIC 2019 C | Env permit | Nasa |
+| Metrics | Approaches | BPIC 2012W | BPIC 2012 WC | BPIC 2020 D | BPIC 2020 I | BPIC 2020 Pe | BPIC2020 Pr | BPIC 2020 R | BPIC 2013 P | BPIC 2019 W | BPIC 2019 C | Env permit | Nasa |  
 |----------------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|--------|
 
 
