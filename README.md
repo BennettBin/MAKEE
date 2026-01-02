@@ -2,7 +2,7 @@
 
 ## Problem introduction (See [pictures/f2.jpg](https://github.com/BennettBin/MAKEE/blob/main/pictures/f2.jpg))
 The implementation process of real-time PBPM usually involves three stages:  
-(1) The PAIS records business activities and their related attributes during business operations in real-time, such as operators, time, equipment, and resources, and then stores the recorded information in a structured manner in event logs.  
+(1) The process-aware information systems (PAIS) records business activities and their related attributes during business operations in real-time, such as operators, time, equipment, and resources, and then stores the recorded information in a structured manner in event logs.  
 (2) The recorded event logs and other business process information become training inputs for the PBPM algorithm after preprocessing. The predictive algorithm can acquire predictive ability by learning the implicit business rules or structures involved.  
 (3) Depending on the characteristics of the PAIS, business process managers deploy the learned predictive model obtained in the information system. The PAIS captures new events in real time and feeds the current prefix sequence into the predictive model, thereby achieving real-time PBPM for process managers. 
 
